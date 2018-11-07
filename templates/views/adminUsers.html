@@ -1,0 +1,51 @@
+<div class="admin__panel" ng-controller='mainCtrl as ctrl'>
+    <div class="name-admin__block">
+        <h1>Панель керування</h1>
+                </div>
+    <div class="admin__functions">
+        
+        <ul>
+            <li><a href="#/admin">Товар</a></li>
+            <li><a href="#/adminOrders">Замовлення</a></li>
+               <li> <a href="#/adminUsers">Користувачі</a></li>
+                        
+        </ul>
+        
+        
+    </div>
+
+    <div class="rules_admin">
+           <table class="table table-inverse">
+  <thead>
+    <tr ng-repeat="user in users track by user.id">
+      <th>{{$index+1}}</th>
+      <th>{{user.name}}</th>
+      <th>{{user.sname}}</th>
+      <th>{{user.login}}</th>
+      <th>{{user.pass}}</th>
+      <th>
+
+          <input type="button" ng-click="removeU(item)" value="Видалити">
+          <input type="button" value="Змінити">
+      </th>
+    </tr>
+  </thead>
+</table>
+       
+     	<form ng-submit='addU()'>
+    
+		<span>Ім"я</span> <input type='text' ng-model='nameNew'>
+		<span>Прізвище</span> <input type='text' ng-model='snameNew'>
+		<span>Логін</span> <input type='text' ng-model='loginNew'>
+		<span>Пароль</span> <input type='text' ng-model='passNew'>
+		
+		<input type='submit' value='Add'>
+	</form>
+
+
+      
+    </div>
+    
+    
+    
+</div>

@@ -1,0 +1,54 @@
+<div class="admin__panel" ng-controller='mainCtrl as ctrl'>
+    <div class="name-admin__block">
+        <h1>Панель керування</h1>
+                </div>
+    <div class="admin__functions">
+        
+        <ul>
+            <li><a href="#/admin">Товар</a></li>
+            <li><a href="#/adminOrders">Замовлення</a></li>
+               <li> <a href="#/adminUsers">Користувачі</a></li>
+                        
+        </ul>
+        
+        
+    </div>
+
+    <div class="rules_admin">
+     <table class="table table-inverse">
+  <thead>
+
+    <tr ng-repeat="order in myOrders">
+      <th>{{$index+1}}</th>
+      <th>{{order.user_name}}</th>
+      <th>{{order.good_id}}</th>
+      <th>{{order.amount}}</th>
+      <th>{{order.full_price}}</th>
+      <th>{{order.payment}}</th>
+<!--      <th>{{good.weight}}</th>-->
+      <th>{{order.confirmation}}</th>
+      <th>{{order.ready}}</th>
+      <th>
+
+          <input type="button" ng-click="removeO(item)" value="Видалити">
+          <input type="button" value="Змінити">
+      </th>
+    </tr>
+  </thead>
+</table>
+
+     	<form ng-submit='add()'>
+		<span>Замовник</span> <input type='text' ng-model='nameNew'>
+		<span>Товар</span> <input type='text' ng-model='categoryidNew'>
+		<span>Кількість</span> <input type='text' ng-model='subcategoryidNew'>
+		<span>Повна вартість</span> <input type='text' ng-model='amountNew'>
+		<span>Оплата</span> <input type='text' ng-model='priceNew'>		
+		<input type='submit' value='Add'>
+	</form>
+
+      
+    </div>
+    
+    
+    
+</div>

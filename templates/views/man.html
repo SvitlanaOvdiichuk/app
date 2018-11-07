@@ -1,0 +1,77 @@
+  <div class="filter__product">
+
+  
+    
+   <div class="name__par">
+      
+   </div>
+    <div class="filter__man">
+    
+</div>
+
+
+
+<div class="catalog__products"  ng-repeat="man in manGoods | filter:search">
+<div class="products__main">
+    <div class="product">
+            
+    <div class="product__img">
+    
+    <img src="" alt="">
+    <img src="{{man.photo}}" alt="">
+    </div>
+    
+    <h2><a href="#"></a>{{man.name}}</h2>
+    <p class="price">{{man.price}}грн</p>
+      <a href="#/produkt"><input type="button" value="Go to..." class="buy"></a>
+    
+   
+                
+
+    </div>
+    
+
+</div>
+    
+ 
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<input type="file" ng-model='myPict' base-sixty-four-input on-load='savePict()'>
+
+
+<span>+{{myPict.filename}}+</span>
+<span>{{myPict.filesize}}+</span>
+<span>{{myPict.filetype}}+</span>
+<span>{{myPict.base64}}+</span>
+<img src="data:image/png;base64,{{myPict.base64}}" alt="">
+<img src="data:{{myPict.filetype}};base64,{{myPict.base64}}" alt=""  width="100" height="100">
+
+<form action="">
+<input type="text" placeholder="Name" required><br>
+<input type="text" placeholder="Sname" required><br>
+   <input type="date" name="bday" placeholder="Birthday"><br>
+ <input type="{{inputType}}" placeholder="Put your password" ng-model="fp"/><br>
+ <input type="{{inputType}}" placeholder="Put your password" ng-model="sp"/><br>
+  <input type="checkbox" id="checkbox" ng-model="passwordCheckbox" ng-click="hideShowPassword()" /><br>
+  <label for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+  <label for="checkbox" ng-if="!passwordCheckbox">Show password</label><br>
+  
+  <input type="reset"><br>
+  <button class="btn" ng-class='{"btn-danger disabled":fp!==sp}'>Add</button>
+  
+ </form>-->

@@ -1,0 +1,86 @@
+<div class="admin__panel" ng-controller='mainCtrl as ctrl'>
+    <div class="name-admin__block">
+        <h1>Панель керування</h1>
+                </div>
+    <div class="admin__functions">
+        
+        <ul>
+            <li><a href="#/admin">Товар</a></li>
+            <li><a href="#/adminOrders">Замовлення</a></li>
+               <li> <a href="#/adminUsers">Користувачі</a></li>
+                        
+        </ul>
+        
+        
+    </div>
+
+    <div class="rules_admin">
+     <table class="table table-inverse">
+  <thead>
+
+    <tr ng-repeat="good in myGoods track by $index">
+      <th>{{$index+1}}</th>
+      <th>{{good.name}}</th>
+      <th>{{good.category_id}}</th>
+      <th>{{good.subcategory_id}}</th>
+      <th>{{good.amount}}</th>
+      <th>{{good.price}}</th>
+<!--      <th>{{good.weight}}</th>-->
+      <th>{{good.country}}</th>
+      <th>{{good.description}}</th>
+      <th>
+
+          <input type="button" ng-click="remove($index)" value="Видалити">
+          <input type="button" value="Змінити">
+      </th>
+    </tr>
+  </thead>
+</table>
+           <table class="table table-inverse">
+  <thead>
+    <tr ng-repeat="user in users track by user.id">
+      <th>{{$index+1}}</th>
+      <th>{{user.name}}</th>
+      <th>{{user.sname}}</th>
+      <th>{{user.login}}</th>
+      <th>{{user.pass}}</th>
+      <th>
+
+          <input type="button" ng-click="remove(item)" value="Видалити">
+          <input type="button" value="Змінити">
+      </th>
+    </tr>
+  </thead>
+</table>
+       
+     	<form ng-submit='add()'>
+		<span>Назва</span> <input type='text' ng-model='nameNew'>
+		<span>Категорія</span> <input type='text' ng-model='categoryidNew'>
+		<span>Підкатегорія</span> <input type='text' ng-model='subcategoryidNew'>
+		<span>Кількість</span> <input type='text' ng-model='amountNew'>
+		<span>Ціна</span> <input type='text' ng-model='priceNew'>
+		<span>Розмір</span> <input type='text' ng-model='weightNew'>
+		<span>Країна</span> <input type='text' ng-model='countryNew'>
+		<span>Опис</span> <input type='text' ng-model='descriptionNew'>
+		
+		
+		<input type='submit' value='Add'>
+	</form>
+<!--
+      <th>{{x.subcategory_id}}</th>
+      <th>{{x.amount}}</th>
+      <th>{{x.price}}</th>
+      <th>{{x.weight}}</th>
+      <th>{{x.country}}</th>
+      <th>{{x.description}}</th>
+-->
+    
+<!--      <th scope="row" ><input type='submit' value='Add'></th>-->
+   
+
+      
+    </div>
+    
+    
+    
+</div>

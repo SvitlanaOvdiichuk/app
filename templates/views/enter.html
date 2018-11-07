@@ -1,0 +1,51 @@
+<!--<form action="/action_page.php" style="border:1px solid #ccc">-->
+ <div class="enter__reg">
+ <div class="ent">
+  <form ng-controller="mainCtrl" class='enter'>
+  <div class="container">
+    <h1>Вхід</h1>
+<!--
+
+    <label for="email"><b>Email</b></label>
+-->
+    <input type="text" class="registr__button" placeholder="Email" ng-model="emailLog" required id="emailLog">
+
+<!--    <label for="psw"><b>Пароль</b></label>-->
+    <input type="password" class="registr__button" placeholder="Password" ng-model="passLog" id="passLog" required>
+
+<!--
+    <label for="psw-repeat"><b>Повторити пароль</b></label>
+    <input type="password" class="registr__button" placeholder="Повторити пароль" required >
+-->
+    
+    <div class="clearfix">
+    
+      <button type="submit" class="signupbtn" ng-click="loginThisUser(emailLog, passLog)">Вхід</button>
+    </div>
+  </div>
+
+</form>
+  </div>
+  
+  <div class='re'>
+
+<form ng-controller="mainCtrl" class="registr">
+  <div class="container">
+    <h1>Реєстрація</h1>
+    
+    <input type="text" class="registr__button"  placeholder="Name" required ng-model="newUser.name">
+
+    <input type="text" class="registr__button"  placeholder="Sname" required  ng-model="newUser.sname"> 
+    <input type="text" class="registr__button"  placeholder="Login" required ng-model="newUser.login">
+        <input type="password" class="registr__button"  placeholder="Password" required ng-model="newUser.pass">
+<!--
+    <label for="psw-repeat"><b>Повторити пароль</b></label>
+    <input type="password" class="registr__button" placeholder="Повторити пароль" required>
+-->
+    <button type="submit" class="registerbtn" ng-click="register(name, sname, login, pass)">Зареєструвати</button>
+
+  </div>
+
+</form> 
+</div>
+</div>
